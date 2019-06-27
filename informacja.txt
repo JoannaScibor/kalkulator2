@@ -1,0 +1,6 @@
+Kalkulator z u¿yciem getElementById, obs³uguje:
+
+-dodawanie,
+-odejmowanie,
+-mno¿enie,
+-dzielenie.

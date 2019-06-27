@@ -1,0 +1,84 @@
+<!DOCTYPE tml>
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>
+Podręczny kalkulator
+</title>
+</head>
+<body>
+<h1>Kalkulator</h1>
+<div id="pojemnik">
+<div id="poj1"><em><h2>Dodawanie</h2></em></br></br>
+	<form action="" name="dodawanie">
+	Podaj pierwszą liczbę: <input type="text" name="liczba1"></br>
+	Podaj drugą liczbę: <input type="text" name="liczba2"></br></br>
+	<input type="button" name="policz" value="Wykonaj działanie" onclick="obliczenia()">
+	</form>
+<span id="wynik1">.....</span>
+</div>
+<div id="poj2"><em><h2>Odejmowanie</h2></em></br></br>
+	<form action="" name="odejmowanie">
+	Podaj pierwszą liczbę: <input type="text" name="liczba3"></br>
+	Podaj drugą liczbę: <input type="text" name="liczba4"></br></br>
+	<input type="button" value="Wykonaj działanie" name="policz" onclick="obliczenia2()">
+	</form>
+<span id="wyn2">.....</span>
+
+
+</div>
+
+<div id="poj3"><em><h2>Mnożenie</h2></em></br></br>
+	<form action="" name="mnozenie">
+	Podaj pierwszą liczbę: <input type="text" name="liczba5"></br>
+	Podaj drugą liczbę: <input type="text" name="liczba6"></br></br>
+	<input type="button" name="policz" onclick="obliczenia3()" value="Wykonaj działanie">
+	</form>
+<span id="wyn3">.....</span>
+
+
+</div>
+<div id="poj4"><em><h2>Dzielenie</h2></em></br></br>
+	<form action="" name="dzielenie">
+	Podaj pierwszą liczbę: <input type="text" name="liczba7"></br>
+	Podaj drugą liczbę: <input type="text" name="liczba8"></br></br>
+	<input type="button" name="policz" onclick="obliczenia4()" value="Wykonaj działanie">
+	</form>
+<span id="wyn4">.....</span>
+
+</div>
+</div>
+
+<script type="text/javascript">
+function obliczenia() {
+var liczba1 = document.forms['dodawanie'].liczba1.value;
+var liczba2 = document.forms['dodawanie'].liczba2.value;
+var wynik = Number(liczba1)+Number(liczba2);
+
+document.getElementById('wynik1').innerHTML="Wynik dodawania wynosi: "+wynik;
+}
+
+function obliczenia2 (){
+var liczba3 = document.forms['odejmowanie'].liczba3.value;
+var liczba4 = document.forms['odejmowanie'].liczba4.value;
+var wynik2 = Number(liczba3)-Number(liczba4);
+document.getElementById('wyn2').innerHTML="Wynik odejmowania wynosi: "+wynik2;
+}
+function obliczenia3 (){
+var liczba5 = document.forms['mnozenie'].liczba5.value;
+var liczba6 = document.forms['mnozenie'].liczba6.value;
+var wynik3 = Number(liczba5)*Number(liczba6);
+document.getElementById('wyn3').innerHTML="Wynik mnożenia wynosi: "+wynik3;
+}
+function obliczenia4 (){
+var liczba7 = document.forms['dzielenie'].liczba7.value;
+var liczba8 = document.forms['dzielenie'].liczba8.value;
+var wynik4 = Number(liczba7)/Number(liczba8);
+document.getElementById('wyn4').innerHTML="Wynik dzielenia wynosi: "+wynik4;
+}
+</script>
+
+</body>
+
+
+</html>
